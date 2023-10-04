@@ -34,5 +34,3 @@ UPDATE Products SET Price = Price + 1.50 ORDER BY ProductID LIMIT 2;
 
 -- My sql code line --
 DELETE FROM Products WHERE UnitPrice < 7.00;
-
--- end --
