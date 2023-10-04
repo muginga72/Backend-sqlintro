@@ -27,18 +27,12 @@ VALUES
 
 (5) Update the two top rows of the Products Table to increase the price by 1.50. (Get SQL to do the addition for you.)  Paste your SQL statement below.
 
--- My sql code lines --
-UPDATE Products SET UnitPrice = UnitPrice + 1.50 WHERE ProductID IN (
-  SELECT TOP 2 ProductID
-  FROM Products
-  ORDER BY ProductID
-);
+-- My sql code line --
+UPDATE Products SET Price = Price + 1.50 ORDER BY ProductID LIMIT 2;
 
 (6) Delete all rows of the Products Table where the price is less than 7.00. Paste your SQL statement below.
 
 -- My sql code line --
 DELETE FROM Products WHERE UnitPrice < 7.00;
-
-Testing pull request
 
 -- end --
