@@ -1,14 +1,42 @@
 (1) Using the Customer Table, select the CustomerName, ContactName, and Country.  Use ORDER BY to order by Country.  
 Use LIMIT and OFFSET to get entries 11 through 20. Paste your SQL statement below. 
 
+-- My sql code line --
+SELECT CustomerName, ContactName, Country FROM Customer ORDER BY Country LIMIT 10 OFFSET 10;
+
 (2) Select all columns from the Customer table where the ContactName starts with A.  Paste your SQL statement below.
+
+-- My sql code line --
+SELECT * FROM Customer WHERE ContactName LIKE 'A%';
 
 (3) Select all columns from the OrderDetails table where the ProductID is 51 and the quantity is greater than 10.
 Paste your SQL statement below.
 
+-- My sql code line --
+SELECT * FROM OrderDetails WHERE ProductID = 51 AND Quantity > 10;
+
 (4) Insert 3 rows into the Products table.  Note that you will have to specify a valid SupplierID and CategoryID, 
 corresponding to rows from the Supplier and Category tables.  Paste your three SQL statements below.
 
+-- My sql code lines --
+INSERT INTO Products (ProductName, SupplierID, CategoryID, QuantityPerUnit, UnitPrice, UnitsInStock, UnitsOnOrder, ReorderLevel, Discontinued)
+VALUES
+  ('Product 1', 1, 1, '5 boxes x 10 bags', 5.99, 100, 0, 10, 0),
+  ('Product 2', 2, 2, '6 boxes x 12 bags', 10.99, 200, 0, 20, 0),
+  ('Product 3', 3, 3, '8 boxes x 20 bags', 12.99, 300, 0, 30, 0);
+
 (5) Update the two top rows of the Products Table to increase the price by 1.50. (Get SQL to do the addition for you.)  Paste your SQL statement below.
 
+-- My sql code lines --
+UPDATE Products SET UnitPrice = UnitPrice + 1.50 WHERE ProductID IN (
+  SELECT TOP 2 ProductID
+  FROM Products
+  ORDER BY ProductID
+);
+
 (6) Delete all rows of the Products Table where the price is less than 7.00. Paste your SQL statement below.
+
+-- My sql code line --
+DELETE FROM Products WHERE UnitPrice < 7.00;
+
+-- end --
