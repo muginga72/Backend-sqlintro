@@ -39,4 +39,6 @@ UPDATE Products SET UnitPrice = UnitPrice + 1.50 WHERE ProductID IN (
 -- My sql code line --
 DELETE FROM Products WHERE UnitPrice < 7.00;
 
+Testing pull request
+
 -- end --
