@@ -19,11 +19,11 @@ SELECT * FROM OrderDetails WHERE ProductID = 51 AND Quantity > 10;
 corresponding to rows from the Supplier and Category tables.  Paste your three SQL statements below.
 
 -- My sql code lines --
-INSERT INTO Products (ProductName, SupplierID, CategoryID, QuantityPerUnit)
+INSERT INTO Products (ProductName, SupplierID, CategoryID, Unit, Price)
 VALUES
-  ("Product 1", 1, 1, "5 boxes x 10 bags"),
-  ("Product 2", 2, 2, "6 boxes x 12 bags"),
-  ("Product 3", 3, 3, "8 boxes x 20 bags");
+  ("Product 1", 1, 1, 10, 10),
+  ("Product 2", 2, 2, 2, 20),
+  ("Product 3", 3, 3, 4, 16);
 
 (5) Update the two top rows of the Products Table to increase the price by 1.50. (Get SQL to do the addition for you.)  Paste your SQL statement below.
 
